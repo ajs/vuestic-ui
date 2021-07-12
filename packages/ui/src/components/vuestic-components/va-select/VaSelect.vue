@@ -264,13 +264,7 @@ export default class VaSelect extends mixins(
       }
 
       if (!Array.isArray(value)) {
-        return this.maxSelections < 1
-          ? []
-          : [value]
-      }
-
-      if (value.length >= this.maxSelections) {
-        return value.slice(0, this.maxSelections)
+        return [value]
       }
     }
 
